@@ -19,7 +19,7 @@ def slack( slack_data ):
 total_hash = requests.get('http://chpchp.ethosdistro.com/?json=yes').json()['total_hash']
 print total_hash
 
-if total_hash < 130:
+if total_hash < 120:
     print "Error"
     slack("Miner problem detected..\nMiner restart in progress.")
     call(["disallow"])
